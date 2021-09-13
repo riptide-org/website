@@ -3,7 +3,7 @@ FROM node:lts as builder
 WORKDIR /app
 
 # Move package and install *first* in order to cache the dependency install step
-COPY ./package.json ./package-lock.json ./yarn.lock ./
+COPY ./package.json ./yarn.lock ./
 
 RUN yarn install \
   --prefer-offline \
