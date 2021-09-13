@@ -6,25 +6,19 @@ WORKDIR /app
 COPY ./package.json ./yarn.lock ./
 
 RUN yarn install \
-  --prefer-offline \
+  NODE_ENV=production --prefer-offline \
   --frozen-lockfile \
   --non-interactive \
-  --production=false
+  --production=true
+
+COPY . .
 
 RUN yarn build
-
-RUN rm -rf node_modules && \
-  NODE_ENV=production yarn install \
-  --prefer-offline \
-  --pure-lockfile \
-  --non-interactive \
-  --production=true
 
 FROM node:lts
 
 WORKDIR /app
 
-COPY . .
 COPY --from=builder /app  .
 
 ENV HOST 0.0.0.0
