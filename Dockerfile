@@ -5,13 +5,11 @@ WORKDIR /app
 # Move package and install *first* in order to cache the dependency install step
 COPY ./package.json ./yarn.lock ./
 
-RUN NODE_ENV=production\
-  yarn install \
+RUN yarn \
   --prefer-offline \
   --frozen-lockfile \
-  --non-interactive \
-  --production=true
-
+  --non-interactive
+  
 COPY . .
 
 RUN yarn build
