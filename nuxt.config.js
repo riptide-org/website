@@ -1,6 +1,6 @@
 export default {
   head: {
-    title: 'front-ui',
+    title: 'File Share Platform',
     htmlAttrs: {
       lang: 'en'
     },
@@ -11,6 +11,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+  
+  render: {
+    csp: true
   },
 
   components: true,
