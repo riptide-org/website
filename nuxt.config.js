@@ -1,6 +1,6 @@
 export default {
   head: {
-    title: 'File Share Platform',
+    title: 'Riptide',
     htmlAttrs: {
       lang: 'en'
     },
@@ -19,12 +19,9 @@ export default {
 
   components: true,
 
-  buildModules: [
-    '@nuxtjs/tailwindcss'
-  ],
-
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-buefy'
   ],
 
   axios: {
@@ -34,12 +31,13 @@ export default {
   publicRuntimeConfig: {
     axios: {
       browserBaseURL: process.env.BROWSER_BASE_URL
-    }
+    },
+    browserBaseURL: process.env.BROWSER_BASE_URL
   },
 
   privateRuntimeConfig: {
     axios: {
-      baseURL: process.env.BASE_URL
+      baseURL: process.env.SSR_BASE_URL
     }
   }
 }

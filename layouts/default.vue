@@ -1,15 +1,19 @@
 <template>
-  <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-        <div class="flex justify-center">
-          <Kevin />
-        </div>
-        <h1 class="text-3xl flex justify-center pt-8 sm:pt-0 font-bold">
-          File Share Platform
-        </h1>
-      <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
-        <Nuxt />
-      </div>
+  <div class="columns mt-6 is-vcentered is-centered is-multiline">
+    <div class="column pb-0 is-full has-text-centered">
+      <Kevin />
     </div>
+    <div class="column pt-0 is-full has-text-centered">
+      <h2 class="is-size-2 has-text-weight-semibold">Riptide</h2>
+    </div>
+    <div class="mt-2 column is-12-mobile is-8-tablet is-6-desktop is-6-widescreen is-5-fullhd">
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <Nuxt />
+          </div>
+        </div>
+      </div>
+    </div>   
   </div>
 </template>

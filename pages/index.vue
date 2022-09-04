@@ -1,19 +1,28 @@
 <template>
   <div>
-    <h2 class="text-2xl leading-7 font-semibold">Welcome</h2>
-    <p class="mt-3 text-gray-800">
-      This platform is a work in progress.
-      <br />
-      You can see things over on GitHub at
-      <a
-        href="https://github.com/file-share-platform"
-        target="_blank"
-        class="text-green-500 hover:underline"
-        >https://github.com/file-share-platform/</a>.
-      <br />
-    </p>
-    <p class="mt-4 pt-4 border-t border-dashed text-gray-500">
-      :)
-    </p>
+    <h2 class="mb-4 is-size-3 has-text-centered">Welcome to Riptide</h2>
+    <div class="body-text">
+      <p>
+        Riptide is a file sharing platform with a twist. We don't store any
+        files on our server.
+        <br />
+        Instead, we act as a gateway between your computer and the person
+        downloading your file. This protects your IP address and doesn't have
+        any special firewall requirements.
+      </p>
+      <hr />
+      <p>
+        Learn how to install Riptide here:
+        <a href="https://github.com/riptide-org/client" target="_blank"
+          >https://github.com/riptide-org/client</a
+        >.
+      </p>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.body-text {
+  font-size: 1.25rem;
+}
+</style>
