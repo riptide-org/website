@@ -14,12 +14,6 @@ COPY . .
 
 RUN yarn build
 
-FROM node:lts
-
-WORKDIR /app
-
-COPY --from=builder /app  .
-
 ENV HOST 0.0.0.0
 ENV PORT 3000
 ENV NODE_ENV production
